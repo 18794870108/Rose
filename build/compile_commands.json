@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/data/home/jasonyichen/Rose/build",
+  "command": "/usr/bin/g++  -DRose_EXPORTS   -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/Channel.o -c /data/home/jasonyichen/Rose/Channel.cc",
+  "file": "/data/home/jasonyichen/Rose/Channel.cc"
+},
+{
+  "directory": "/data/home/jasonyichen/Rose/build",
+  "command": "/usr/bin/g++  -DRose_EXPORTS   -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/EventLoop.o -c /data/home/jasonyichen/Rose/EventLoop.cc",
+  "file": "/data/home/jasonyichen/Rose/EventLoop.cc"
+},
+{
+  "directory": "/data/home/jasonyichen/Rose/build",
+  "command": "/usr/bin/g++  -DRose_EXPORTS   -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/InetAddress.o -c /data/home/jasonyichen/Rose/InetAddress.cc",
+  "file": "/data/home/jasonyichen/Rose/InetAddress.cc"
+},
+{
+  "directory": "/data/home/jasonyichen/Rose/build",
+  "command": "/usr/bin/g++  -DRose_EXPORTS   -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/Logger.o -c /data/home/jasonyichen/Rose/Logger.cc",
+  "file": "/data/home/jasonyichen/Rose/Logger.cc"
+},
+{
+  "directory": "/data/home/jasonyichen/Rose/build",
+  "command": "/usr/bin/g++  -DRose_EXPORTS   -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/TcpServer.o -c /data/home/jasonyichen/Rose/TcpServer.cc",
+  "file": "/data/home/jasonyichen/Rose/TcpServer.cc"
+},
+{
+  "directory": "/data/home/jasonyichen/Rose/build",
+  "command": "/usr/bin/g++  -DRose_EXPORTS   -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/Timestamp.o -c /data/home/jasonyichen/Rose/Timestamp.cc",
+  "file": "/data/home/jasonyichen/Rose/Timestamp.cc"
+}
+]

@@ -1,0 +1,3 @@
+/data/home/jasonyichen/Rose/build/CMakeFiles/rebuild_cache.dir
+/data/home/jasonyichen/Rose/build/CMakeFiles/edit_cache.dir
+/data/home/jasonyichen/Rose/build/CMakeFiles/Rose.dir
