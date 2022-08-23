@@ -10,4 +10,8 @@
 1.delete build and lib
 2.operate CmakeLists.txt
 
-### Just Test
+
+
+### ENV
+Ubuntu 20.0.4
+TencentDevCloud -> CenOS7
