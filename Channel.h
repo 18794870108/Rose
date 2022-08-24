@@ -40,8 +40,8 @@ public:
     bool isReading() const {return m_events & KReadEvent;}
     bool isWriting() const {return m_events & KWriteEvent;}
     
-    int index(){return m_index;}
-    void set_index(int index){m_index = index;}
+    int status(){return m_status;}
+    void set_status(int status){m_status = status;}
 
     EventLoop* ownerloop() {return m_loop;}
 
@@ -60,7 +60,7 @@ private:
 
     int m_events;
     int m_revents;
-    int m_index;
+    int m_status;
 
     std::weak_ptr<void> m_tie;
     bool m_tied;
