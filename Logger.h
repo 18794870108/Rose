@@ -17,7 +17,7 @@
     do \
     { \
         Logger& logger  = Logger::instance(); \
-        logger.setLogLevel(LOG_ERROR); \
+        logger.setLogLevel(ERROR); \
         char buf[1024] = {0}; \
         snprintf(buf,1024,logmsgFormat,##__VA_ARGS__); \
         logger.wirteLog(buf); \
@@ -27,10 +27,11 @@
     do \
     { \
         Logger& logger  = Logger::instance(); \
-        logger.setLogLevel(LOG_FATAL); \
+        logger.setLogLevel(FATAL); \
         char buf[1024] = {0}; \
         snprintf(buf,1024,logmsgFormat,##__VA_ARGS__); \
         logger.wirteLog(buf); \
+        exit(-1); \
     }while(0)
 
 #ifdef ROSEDEBUG
@@ -38,7 +39,7 @@
     do \
     { \
         Logger& logger  = Logger::instance(); \
-        logger.setLogLevel(LOG_DEBUG); \
+        logger.setLogLevel(DEBUG); \
         char buf[1024] = {0}; \
         snprintf(buf,1024,logmsgFormat,##__VA_ARGS__); \
         logger.log(buf); \
