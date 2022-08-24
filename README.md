@@ -14,4 +14,4 @@
 
 ### ENV
 Ubuntu 20.0.4
-TencentDevCloud -> CenOS7
+TencentDevCloud -> CentOS7
