@@ -7,6 +7,20 @@ CMakeFiles/Rose.dir/Channel.o: ../Logger.h
 CMakeFiles/Rose.dir/Channel.o: ../Timestamp.h
 CMakeFiles/Rose.dir/Channel.o: ../noncopyable.h
 
+CMakeFiles/Rose.dir/DefaultPoller.o: ../Channel.h
+CMakeFiles/Rose.dir/DefaultPoller.o: ../DefaultPoller.cc
+CMakeFiles/Rose.dir/DefaultPoller.o: ../Poller.h
+CMakeFiles/Rose.dir/DefaultPoller.o: ../Timestamp.h
+CMakeFiles/Rose.dir/DefaultPoller.o: ../noncopyable.h
+
+CMakeFiles/Rose.dir/EPollPoller.o: ../Channel.h
+CMakeFiles/Rose.dir/EPollPoller.o: ../EPollPoller.cc
+CMakeFiles/Rose.dir/EPollPoller.o: ../EPollPoller.h
+CMakeFiles/Rose.dir/EPollPoller.o: ../Logger.h
+CMakeFiles/Rose.dir/EPollPoller.o: ../Poller.h
+CMakeFiles/Rose.dir/EPollPoller.o: ../Timestamp.h
+CMakeFiles/Rose.dir/EPollPoller.o: ../noncopyable.h
+
 CMakeFiles/Rose.dir/EventLoop.o: ../EventLoop.cc
 CMakeFiles/Rose.dir/EventLoop.o: ../EventLoop.h
 
@@ -17,6 +31,12 @@ CMakeFiles/Rose.dir/Logger.o: ../Logger.cc
 CMakeFiles/Rose.dir/Logger.o: ../Logger.h
 CMakeFiles/Rose.dir/Logger.o: ../Timestamp.h
 CMakeFiles/Rose.dir/Logger.o: ../noncopyable.h
+
+CMakeFiles/Rose.dir/Poller.o: ../Channel.h
+CMakeFiles/Rose.dir/Poller.o: ../Poller.cc
+CMakeFiles/Rose.dir/Poller.o: ../Poller.h
+CMakeFiles/Rose.dir/Poller.o: ../Timestamp.h
+CMakeFiles/Rose.dir/Poller.o: ../noncopyable.h
 
 CMakeFiles/Rose.dir/TcpServer.o: ../TcpServer.cc
 CMakeFiles/Rose.dir/TcpServer.o: ../TcpServer.h

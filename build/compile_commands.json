@@ -6,6 +6,16 @@
 },
 {
   "directory": "/data/home/jasonyichen/Rose/build",
+  "command": "/usr/bin/g++  -DRose_EXPORTS   -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/DefaultPoller.o -c /data/home/jasonyichen/Rose/DefaultPoller.cc",
+  "file": "/data/home/jasonyichen/Rose/DefaultPoller.cc"
+},
+{
+  "directory": "/data/home/jasonyichen/Rose/build",
+  "command": "/usr/bin/g++  -DRose_EXPORTS   -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/EPollPoller.o -c /data/home/jasonyichen/Rose/EPollPoller.cc",
+  "file": "/data/home/jasonyichen/Rose/EPollPoller.cc"
+},
+{
+  "directory": "/data/home/jasonyichen/Rose/build",
   "command": "/usr/bin/g++  -DRose_EXPORTS   -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/EventLoop.o -c /data/home/jasonyichen/Rose/EventLoop.cc",
   "file": "/data/home/jasonyichen/Rose/EventLoop.cc"
 },
@@ -18,6 +28,11 @@
   "directory": "/data/home/jasonyichen/Rose/build",
   "command": "/usr/bin/g++  -DRose_EXPORTS   -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/Logger.o -c /data/home/jasonyichen/Rose/Logger.cc",
   "file": "/data/home/jasonyichen/Rose/Logger.cc"
+},
+{
+  "directory": "/data/home/jasonyichen/Rose/build",
+  "command": "/usr/bin/g++  -DRose_EXPORTS   -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/Poller.o -c /data/home/jasonyichen/Rose/Poller.cc",
+  "file": "/data/home/jasonyichen/Rose/Poller.cc"
 },
 {
   "directory": "/data/home/jasonyichen/Rose/build",

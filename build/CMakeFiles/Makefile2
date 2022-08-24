@@ -74,12 +74,12 @@ clean: CMakeFiles/Rose.dir/clean
 CMakeFiles/Rose.dir/all:
 	$(MAKE) -f CMakeFiles/Rose.dir/build.make CMakeFiles/Rose.dir/depend
 	$(MAKE) -f CMakeFiles/Rose.dir/build.make CMakeFiles/Rose.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/home/jasonyichen/Rose/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target Rose"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/home/jasonyichen/Rose/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target Rose"
 .PHONY : CMakeFiles/Rose.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Rose.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/jasonyichen/Rose/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/jasonyichen/Rose/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Rose.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/jasonyichen/Rose/build/CMakeFiles 0
 .PHONY : CMakeFiles/Rose.dir/rule
