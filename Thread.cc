@@ -23,7 +23,7 @@ Thread::~Thread()
     }
 }
 
-void Thread::start()
+void Thread::start()//when this function down , a new thread must be created 
 {
     m_started = true;
     sem_t sem;
