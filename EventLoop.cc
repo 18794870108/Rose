@@ -64,7 +64,7 @@ void EventLoop::loop()
     while(!quit_)
     {
         activeChannels_.clear();
-        pollReturnTime_ = poller_->poll(kPollTimeMs, &activeChannels_);//1.clear 2.poll->fillactivechannels->hanle activechannels
+        pollReturnTime_ = poller_->poll(kPollTimeMs, &activeChannels_);//1.clear 2.poll->fillactivechannels->handle activechannels
         for (Channel *channel : activeChannels_)
         {
             channel->handleEvent(pollReturnTime_);
@@ -157,7 +157,7 @@ void EventLoop::doPendingFunctors() // 执行回调
     callingPendingFunctors_ = true;
 
     {
-        std::unique_lock<std::mutex> lock(mutex_);
+        std::unique_lock<std::mutex> lock(mutex_);//queueinloop require this mutex too
         functors.swap(pendingFunctors_);
     }
 
