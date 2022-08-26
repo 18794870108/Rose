@@ -30,10 +30,10 @@ public:
     int events(){return m_events;}
     int set_revents(int revents);
     
-    void enableReading(){m_events |= KReadEvent;} //update()..
-    void enableWriting(){m_events |= KWriteEvent;}
-    void disableReading(){m_events &= ~KReadEvent;} 
-    void disableWriting(){m_events &= ~KWriteEvent;}
+    void enableReading(){m_events |= KReadEvent;update();} 
+    void enableWriting(){m_events |= KWriteEvent;update();}
+    void disableReading(){m_events &= ~KReadEvent;update();} 
+    void disableWriting(){m_events &= ~KWriteEvent;update();}
     void disableAll(){m_events = KNoneEvent;}
     
     bool isNoneEvent() const {return m_events == KNoneEvent;}
@@ -46,6 +46,7 @@ public:
     EventLoop* ownerloop() {return m_loop;}
 
     void remove();
+    
 private:
     static const int KNoneEvent;
     static const int KReadEvent;
@@ -62,11 +63,11 @@ private:
     int m_revents;
     int m_status;
 
-    std::weak_ptr<void> m_tie;
-    bool m_tied;
+    std::weak_ptr<void>     m_tie;
+    bool                    m_tied;
 
-    ReadEventCallback m_readcallback;
-    EventCallback m_writecallback;
-    EventCallback m_closecallback;
-    EventCallback m_errorcallback; 
+    ReadEventCallback   m_readcallback;
+    EventCallback       m_writecallback;
+    EventCallback       m_closecallback;
+    EventCallback       m_errorcallback; 
 };
