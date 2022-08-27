@@ -33,6 +33,13 @@
         "optional": "cpp",
         "sstream": "cpp",
         "tuple": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "atomic": "cpp",
+        "chrono": "cpp",
+        "ctime": "cpp",
+        "mutex": "cpp",
+        "ratio": "cpp",
+        "thread": "cpp",
+        "condition_variable": "cpp"
     }
 }

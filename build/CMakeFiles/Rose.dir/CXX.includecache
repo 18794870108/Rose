@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,63 +6,43 @@
 
 #IncludeRegexTransform: 
 
-/data/home/jasonyichen/Rose/Channel.h
-noncopyable.h
-/data/home/jasonyichen/Rose/noncopyable.h
-Timestamp.h
-/data/home/jasonyichen/Rose/Timestamp.h
-functional
+/data/home/jasonyichen/Rose/InetAddress.h
+arpa/inet.h
 -
-memory
+netinet/in.h
+-
+string
 -
 
-/data/home/jasonyichen/Rose/EPollPoller.cc
-EPollPoller.h
-/data/home/jasonyichen/Rose/EPollPoller.h
+/data/home/jasonyichen/Rose/Logger.h
+noncopyable.h
+/data/home/jasonyichen/Rose/noncopyable.h
+string
+-
+
+/data/home/jasonyichen/Rose/Socket.cc
+Socket.h
+/data/home/jasonyichen/Rose/Socket.h
 Logger.h
 /data/home/jasonyichen/Rose/Logger.h
-error.h
-/data/home/jasonyichen/Rose/error.h
-Channel.h
-/data/home/jasonyichen/Rose/Channel.h
+InetAddress.h
+/data/home/jasonyichen/Rose/InetAddress.h
 unistd.h
+-
+netinet/tcp.h
+-
+sys/types.h
+-
+sys/socket.h
 -
 strings.h
 -
 
-/data/home/jasonyichen/Rose/EPollPoller.h
-Poller.h
-/data/home/jasonyichen/Rose/Poller.h
-Timestamp.h
-/data/home/jasonyichen/Rose/Timestamp.h
-vector
--
-sys/epoll.h
--
-
-/data/home/jasonyichen/Rose/Logger.h
+/data/home/jasonyichen/Rose/Socket.h
 noncopyable.h
 /data/home/jasonyichen/Rose/noncopyable.h
-string
--
-
-/data/home/jasonyichen/Rose/Poller.h
-noncopyable.h
-/data/home/jasonyichen/Rose/noncopyable.h
-Timestamp.h
-/data/home/jasonyichen/Rose/Timestamp.h
-Channel.h
-/data/home/jasonyichen/Rose/Channel.h
-vector
--
-unordered_map
--
-
-/data/home/jasonyichen/Rose/Timestamp.h
-iostream
--
-string
--
+InetAddress.h
+/data/home/jasonyichen/Rose/InetAddress.h
 
 /data/home/jasonyichen/Rose/noncopyable.h
 

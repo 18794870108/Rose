@@ -3,6 +3,7 @@
 #include "InetAddress.h"
 
 #include <unistd.h>
+#include <netinet/tcp.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <strings.h>
@@ -53,7 +54,7 @@ void Socket::shutdownWrite()
 void Socket::setTCPNoDeplay(bool on)
 {
     int option = on?1:0;
-    ::setsockopt(m_sockfd,IPPROTO_TCP,TCP_NODELAY,&option,sizeof(option));
+    ::setsockopt(m_sockfd,IPPROTO_TCP,TCP_NODELAY,&option,sizeof option);
 }
 
 void Socket::setReuseAddr(bool on)
