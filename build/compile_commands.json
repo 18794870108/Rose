@@ -16,6 +16,16 @@
 },
 {
   "directory": "/data/home/jasonyichen/Rose/build",
+  "command": "/usr/bin/g++   -DRose_EXPORTS  -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/TcpConnection.o -c /data/home/jasonyichen/Rose/TcpConnection.cc",
+  "file": "/data/home/jasonyichen/Rose/TcpConnection.cc"
+},
+{
+  "directory": "/data/home/jasonyichen/Rose/build",
+  "command": "/usr/bin/g++   -DRose_EXPORTS  -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/Buffer.o -c /data/home/jasonyichen/Rose/Buffer.cc",
+  "file": "/data/home/jasonyichen/Rose/Buffer.cc"
+},
+{
+  "directory": "/data/home/jasonyichen/Rose/build",
   "command": "/usr/bin/g++   -DRose_EXPORTS  -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/Thread.o -c /data/home/jasonyichen/Rose/Thread.cc",
   "file": "/data/home/jasonyichen/Rose/Thread.cc"
 },
@@ -68,5 +78,10 @@
   "directory": "/data/home/jasonyichen/Rose/build",
   "command": "/usr/bin/g++   -DRose_EXPORTS  -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/EventLoop.o -c /data/home/jasonyichen/Rose/EventLoop.cc",
   "file": "/data/home/jasonyichen/Rose/EventLoop.cc"
+},
+{
+  "directory": "/data/home/jasonyichen/Rose/build",
+  "command": "/usr/bin/g++   -DRose_EXPORTS  -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/Acceptor.o -c /data/home/jasonyichen/Rose/Acceptor.cc",
+  "file": "/data/home/jasonyichen/Rose/Acceptor.cc"
 }
 ]

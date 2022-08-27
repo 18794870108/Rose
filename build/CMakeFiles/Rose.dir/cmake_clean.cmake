@@ -2,6 +2,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/Rose.dir/EPollPoller.o"
   "CMakeFiles/Rose.dir/CurrentThread.o"
   "CMakeFiles/Rose.dir/Logger.o"
+  "CMakeFiles/Rose.dir/TcpConnection.o"
+  "CMakeFiles/Rose.dir/Buffer.o"
   "CMakeFiles/Rose.dir/Thread.o"
   "CMakeFiles/Rose.dir/Poller.o"
   "CMakeFiles/Rose.dir/Timestamp.o"
@@ -13,6 +15,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/Rose.dir/TcpServer.o"
   "CMakeFiles/Rose.dir/InetAddress.o"
   "CMakeFiles/Rose.dir/EventLoop.o"
+  "CMakeFiles/Rose.dir/Acceptor.o"
   "../lib/libRose.pdb"
   "../lib/libRose.so"
 )
