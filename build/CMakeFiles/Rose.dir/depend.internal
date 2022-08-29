@@ -88,8 +88,18 @@ CMakeFiles/Rose.dir/Socket.o
  /data/home/jasonyichen/Rose/Socket.h
  /data/home/jasonyichen/Rose/noncopyable.h
 CMakeFiles/Rose.dir/TcpConnection.o
+ /data/home/jasonyichen/Rose/Buffer.h
+ /data/home/jasonyichen/Rose/Callbacks.h
+ /data/home/jasonyichen/Rose/Channel.h
+ /data/home/jasonyichen/Rose/CurrentThread.h
+ /data/home/jasonyichen/Rose/EventLoop.h
+ /data/home/jasonyichen/Rose/InetAddress.h
+ /data/home/jasonyichen/Rose/Logger.h
+ /data/home/jasonyichen/Rose/Socket.h
  /data/home/jasonyichen/Rose/TcpConnection.cc
  /data/home/jasonyichen/Rose/TcpConnection.h
+ /data/home/jasonyichen/Rose/Timestamp.h
+ /data/home/jasonyichen/Rose/noncopyable.h
 CMakeFiles/Rose.dir/TcpServer.o
  /data/home/jasonyichen/Rose/Acceptor.h
  /data/home/jasonyichen/Rose/Callbacks.h
