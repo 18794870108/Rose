@@ -14,6 +14,8 @@
 class TcpConnection:noncopyable,public std::enable_shared_from_this<TcpConnection>
 {
 public:
+    enum State{Disconnected,Connecting,Connected,Disconnecting};
+
     TcpConnection(EventLoop* loop,
                 const std::string& name,
                 int sockfd,
@@ -27,14 +29,13 @@ public:
     const InetAddress& peerAddress()  {return m_peerAddr;}
 
     bool connected() {return m_state==Connected;}
-
-    void send(Buffer* msg,int len);
+    void setstate(State s){m_state = s;}
 
     void shutdown();
 
     void setConnectionCallback(const ConnectionCallback& cb) {m_connectioncallback = cb;}
     void setMessageCallback(const MessageCallback& cb) {m_messageCallback =  cb;}
-    void setWriteCompleteCallback(const WriteCompleteCallback& cb){m_writeCallback = cb;}
+    void setWriteCompleteCallback(const WriteCompleteCallback& cb){m_writeCompleteCallback = cb;}
     void setHighWaterMarkCallback(const HighWaterMarkCallback& cb,size_t highwater)
     {
         m_highwaterCallback = cb;
@@ -46,15 +47,14 @@ public:
     void connectDestoryed();
 
 private:
-    enum State{Disconnected,Connecting,Connected,Disconnecting};
-
     void handleRead(Timestamp receiveTime);
     void handleWrite();
     void handleClose();
     void handleError();
 
+    void send(std::string& buffer);
     void sendInLoop(const void* message,size_t len);
-
+    
     void shutdownInLoop();
 
     EventLoop*                              m_loop;
@@ -70,7 +70,7 @@ private:
 
     ConnectionCallback                      m_connectioncallback;
     MessageCallback                         m_messageCallback;
-    WriteCompleteCallback                   m_writeCallback;
+    WriteCompleteCallback                   m_writeCompleteCallback;
     HighWaterMarkCallback                   m_highwaterCallback;
     CloseCallback                           m_closeCallback;
 
