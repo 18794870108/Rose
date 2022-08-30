@@ -2,6 +2,7 @@
 
 #include <errno.h>
 #include <sys/uio.h>
+#include <unistd.h>
 
 void Buffer::makespace(size_t len)
 {
@@ -56,5 +57,15 @@ ssize_t Buffer::readFd(int fd,int* saveError)
         append(extrabuf,n-writeable);   
     }
 
+    return n;
+}
+
+ssize_t Buffer::writeFd(int fd,int* saveError)
+{
+    ssize_t n = ::write(fd,readableBegin(),readableBytes());
+    if(n<0)
+    {
+        *saveError = errno;
+    }
     return n;
 }

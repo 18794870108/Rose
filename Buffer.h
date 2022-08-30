@@ -93,6 +93,7 @@ public:
     void append(const char* data,size_t len);
 
     ssize_t readFd(int fd,int* saveError);
+    ssize_t writeFd(int fd,int* saveError);
 
 private:
 
