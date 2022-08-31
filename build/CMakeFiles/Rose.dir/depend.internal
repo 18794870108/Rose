@@ -75,6 +75,8 @@ CMakeFiles/Rose.dir/Logger.o
  /data/home/jasonyichen/Rose/Logger.h
  /data/home/jasonyichen/Rose/Timestamp.h
  /data/home/jasonyichen/Rose/noncopyable.h
+CMakeFiles/Rose.dir/PollPoller.o
+ /data/home/jasonyichen/Rose/PollPoller.cc
 CMakeFiles/Rose.dir/Poller.o
  /data/home/jasonyichen/Rose/Channel.h
  /data/home/jasonyichen/Rose/Poller.cc

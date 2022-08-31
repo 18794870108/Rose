@@ -75,6 +75,8 @@ CMakeFiles/Rose.dir/Logger.o: ../Logger.h
 CMakeFiles/Rose.dir/Logger.o: ../Timestamp.h
 CMakeFiles/Rose.dir/Logger.o: ../noncopyable.h
 
+CMakeFiles/Rose.dir/PollPoller.o: ../PollPoller.cc
+
 CMakeFiles/Rose.dir/Poller.o: ../Channel.h
 CMakeFiles/Rose.dir/Poller.o: ../Poller.cc
 CMakeFiles/Rose.dir/Poller.o: ../Poller.h

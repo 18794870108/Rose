@@ -15,6 +15,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/data/home/jasonyichen/Rose/EventLoopThreadPool.cc" "/data/home/jasonyichen/Rose/build/CMakeFiles/Rose.dir/EventLoopThreadPool.o"
   "/data/home/jasonyichen/Rose/InetAddress.cc" "/data/home/jasonyichen/Rose/build/CMakeFiles/Rose.dir/InetAddress.o"
   "/data/home/jasonyichen/Rose/Logger.cc" "/data/home/jasonyichen/Rose/build/CMakeFiles/Rose.dir/Logger.o"
+  "/data/home/jasonyichen/Rose/PollPoller.cc" "/data/home/jasonyichen/Rose/build/CMakeFiles/Rose.dir/PollPoller.o"
   "/data/home/jasonyichen/Rose/Poller.cc" "/data/home/jasonyichen/Rose/build/CMakeFiles/Rose.dir/Poller.o"
   "/data/home/jasonyichen/Rose/Socket.cc" "/data/home/jasonyichen/Rose/build/CMakeFiles/Rose.dir/Socket.o"
   "/data/home/jasonyichen/Rose/TcpConnection.cc" "/data/home/jasonyichen/Rose/build/CMakeFiles/Rose.dir/TcpConnection.o"

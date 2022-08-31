@@ -374,9 +374,32 @@ CMakeFiles/Rose.dir/TcpServer.o.provides: CMakeFiles/Rose.dir/TcpServer.o.requir
 
 CMakeFiles/Rose.dir/TcpServer.o.provides.build: CMakeFiles/Rose.dir/TcpServer.o
 
+CMakeFiles/Rose.dir/PollPoller.o: CMakeFiles/Rose.dir/flags.make
+CMakeFiles/Rose.dir/PollPoller.o: ../PollPoller.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/PollPoller.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/PollPoller.o -c /data/home/jasonyichen/Rose/PollPoller.cc
+
+CMakeFiles/Rose.dir/PollPoller.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/PollPoller.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/PollPoller.cc > CMakeFiles/Rose.dir/PollPoller.i
+
+CMakeFiles/Rose.dir/PollPoller.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/PollPoller.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/PollPoller.cc -o CMakeFiles/Rose.dir/PollPoller.s
+
+CMakeFiles/Rose.dir/PollPoller.o.requires:
+.PHONY : CMakeFiles/Rose.dir/PollPoller.o.requires
+
+CMakeFiles/Rose.dir/PollPoller.o.provides: CMakeFiles/Rose.dir/PollPoller.o.requires
+	$(MAKE) -f CMakeFiles/Rose.dir/build.make CMakeFiles/Rose.dir/PollPoller.o.provides.build
+.PHONY : CMakeFiles/Rose.dir/PollPoller.o.provides
+
+CMakeFiles/Rose.dir/PollPoller.o.provides.build: CMakeFiles/Rose.dir/PollPoller.o
+
 CMakeFiles/Rose.dir/InetAddress.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/InetAddress.o: ../InetAddress.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/InetAddress.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/InetAddress.o -c /data/home/jasonyichen/Rose/InetAddress.cc
 
@@ -399,7 +422,7 @@ CMakeFiles/Rose.dir/InetAddress.o.provides.build: CMakeFiles/Rose.dir/InetAddres
 
 CMakeFiles/Rose.dir/EventLoop.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/EventLoop.o: ../EventLoop.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/EventLoop.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/EventLoop.o -c /data/home/jasonyichen/Rose/EventLoop.cc
 
@@ -422,7 +445,7 @@ CMakeFiles/Rose.dir/EventLoop.o.provides.build: CMakeFiles/Rose.dir/EventLoop.o
 
 CMakeFiles/Rose.dir/Acceptor.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/Acceptor.o: ../Acceptor.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/Acceptor.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Acceptor.o -c /data/home/jasonyichen/Rose/Acceptor.cc
 
@@ -459,6 +482,7 @@ Rose_OBJECTS = \
 "CMakeFiles/Rose.dir/DefaultPoller.o" \
 "CMakeFiles/Rose.dir/EventLoopThreadPool.o" \
 "CMakeFiles/Rose.dir/TcpServer.o" \
+"CMakeFiles/Rose.dir/PollPoller.o" \
 "CMakeFiles/Rose.dir/InetAddress.o" \
 "CMakeFiles/Rose.dir/EventLoop.o" \
 "CMakeFiles/Rose.dir/Acceptor.o"
@@ -480,6 +504,7 @@ Rose_EXTERNAL_OBJECTS =
 ../lib/libRose.so: CMakeFiles/Rose.dir/DefaultPoller.o
 ../lib/libRose.so: CMakeFiles/Rose.dir/EventLoopThreadPool.o
 ../lib/libRose.so: CMakeFiles/Rose.dir/TcpServer.o
+../lib/libRose.so: CMakeFiles/Rose.dir/PollPoller.o
 ../lib/libRose.so: CMakeFiles/Rose.dir/InetAddress.o
 ../lib/libRose.so: CMakeFiles/Rose.dir/EventLoop.o
 ../lib/libRose.so: CMakeFiles/Rose.dir/Acceptor.o
@@ -506,6 +531,7 @@ CMakeFiles/Rose.dir/requires: CMakeFiles/Rose.dir/EventLoopThread.o.requires
 CMakeFiles/Rose.dir/requires: CMakeFiles/Rose.dir/DefaultPoller.o.requires
 CMakeFiles/Rose.dir/requires: CMakeFiles/Rose.dir/EventLoopThreadPool.o.requires
 CMakeFiles/Rose.dir/requires: CMakeFiles/Rose.dir/TcpServer.o.requires
+CMakeFiles/Rose.dir/requires: CMakeFiles/Rose.dir/PollPoller.o.requires
 CMakeFiles/Rose.dir/requires: CMakeFiles/Rose.dir/InetAddress.o.requires
 CMakeFiles/Rose.dir/requires: CMakeFiles/Rose.dir/EventLoop.o.requires
 CMakeFiles/Rose.dir/requires: CMakeFiles/Rose.dir/Acceptor.o.requires

@@ -31,6 +31,11 @@ void Channel::update()
     m_loop->updateChannel(this);
 }
 
+void Channel::remove()
+{
+    m_loop->removeChannel(this);
+}
+
 void Channel::handleEvent(Timestamp receiveTime)
 {
     std::shared_ptr<void> guard;

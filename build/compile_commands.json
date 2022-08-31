@@ -71,6 +71,11 @@
 },
 {
   "directory": "/data/home/jasonyichen/Rose/build",
+  "command": "/usr/bin/g++   -DRose_EXPORTS  -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/PollPoller.o -c /data/home/jasonyichen/Rose/PollPoller.cc",
+  "file": "/data/home/jasonyichen/Rose/PollPoller.cc"
+},
+{
+  "directory": "/data/home/jasonyichen/Rose/build",
   "command": "/usr/bin/g++   -DRose_EXPORTS  -g -std=c++11 -fPIC -O3 -DNDEBUG -fPIC   -o CMakeFiles/Rose.dir/InetAddress.o -c /data/home/jasonyichen/Rose/InetAddress.cc",
   "file": "/data/home/jasonyichen/Rose/InetAddress.cc"
 },

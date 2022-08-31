@@ -280,6 +280,21 @@ Logger.s:
 .PHONY : Logger.s
 
 # target to build an object file
+PollPoller.o:
+	$(MAKE) -f CMakeFiles/Rose.dir/build.make CMakeFiles/Rose.dir/PollPoller.o
+.PHONY : PollPoller.o
+
+# target to preprocess a source file
+PollPoller.i:
+	$(MAKE) -f CMakeFiles/Rose.dir/build.make CMakeFiles/Rose.dir/PollPoller.i
+.PHONY : PollPoller.i
+
+# target to generate assembly for a file
+PollPoller.s:
+	$(MAKE) -f CMakeFiles/Rose.dir/build.make CMakeFiles/Rose.dir/PollPoller.s
+.PHONY : PollPoller.s
+
+# target to build an object file
 Poller.o:
 	$(MAKE) -f CMakeFiles/Rose.dir/build.make CMakeFiles/Rose.dir/Poller.o
 .PHONY : Poller.o
@@ -411,6 +426,9 @@ help:
 	@echo "... Logger.o"
 	@echo "... Logger.i"
 	@echo "... Logger.s"
+	@echo "... PollPoller.o"
+	@echo "... PollPoller.i"
+	@echo "... PollPoller.s"
 	@echo "... Poller.o"
 	@echo "... Poller.i"
 	@echo "... Poller.s"
