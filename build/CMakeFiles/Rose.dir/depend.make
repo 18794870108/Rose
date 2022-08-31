@@ -103,6 +103,7 @@ CMakeFiles/Rose.dir/TcpConnection.o: ../Timestamp.h
 CMakeFiles/Rose.dir/TcpConnection.o: ../noncopyable.h
 
 CMakeFiles/Rose.dir/TcpServer.o: ../Acceptor.h
+CMakeFiles/Rose.dir/TcpServer.o: ../Buffer.h
 CMakeFiles/Rose.dir/TcpServer.o: ../Callbacks.h
 CMakeFiles/Rose.dir/TcpServer.o: ../Channel.h
 CMakeFiles/Rose.dir/TcpServer.o: ../CurrentThread.h
@@ -112,6 +113,7 @@ CMakeFiles/Rose.dir/TcpServer.o: ../EventLoopThreadPool.h
 CMakeFiles/Rose.dir/TcpServer.o: ../InetAddress.h
 CMakeFiles/Rose.dir/TcpServer.o: ../Logger.h
 CMakeFiles/Rose.dir/TcpServer.o: ../Socket.h
+CMakeFiles/Rose.dir/TcpServer.o: ../TcpConnection.h
 CMakeFiles/Rose.dir/TcpServer.o: ../TcpServer.cc
 CMakeFiles/Rose.dir/TcpServer.o: ../TcpServer.h
 CMakeFiles/Rose.dir/TcpServer.o: ../Thread.h

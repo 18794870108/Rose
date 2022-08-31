@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug 30 19:32:48 2022
+# Make data base, printed on Wed Aug 31 11:50:57 2022
 
 # Variables
 
@@ -41,7 +41,7 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /data/home/jasonyichen
 # environment
-SSH_CONNECTION = 10.95.30.112 61049 9.135.91.93 36000
+SSH_CONNECTION = 10.95.30.64 53644 9.135.91.93 36000
 # environment
 PATH = /data/home/jasonyichen/.vscode-server/bin/e4503b30fc78200f846c62cf8091b76ff5547662/bin/remote-cli:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/data/home/jasonyichen/.local/bin:/data/home/jasonyichen/bin
 # environment
@@ -53,7 +53,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 PWD = /data/home/jasonyichen/Rose
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-d56f1e6f-aea9-413d-9713-db3d358e0005.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-7ac45a5b-d09a-4aad-bd4f-aee7543ff655.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -101,7 +101,7 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 10.95.30.112 61049 36000
+SSH_CLIENT = 10.95.30.64 53644 36000
 # environment
 MAIL = /var/spool/mail/jasonyichen
 # automatic
@@ -115,7 +115,7 @@ MAKEFILES :=
 # automatic
 <F = $(notdir $<)
 # environment
-TST_HACK_BASH_SESSION_ID = 124272245601629
+TST_HACK_BASH_SESSION_ID = 68540750027422
 # environment
 LC_ALL = C
 # automatic
@@ -204,7 +204,7 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=53/8192=1%, Rehash=0, Collisions=1/56=2%
-# Finished Make data base on Tue Aug 30 19:32:48 2022
+# Finished Make data base on Wed Aug 31 11:50:57 2022
 
  
 make: *** No rule to make target `all'.  Stop.
