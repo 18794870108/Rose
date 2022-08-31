@@ -1,37 +1,40 @@
 #pragma once
-
 #include "noncopyable.h"
-#include "EventLoopThread.h"
 
 #include <functional>
 #include <string>
 #include <vector>
+#include <memory>
 
-class Thread;
 class EventLoop;
+class EventLoopThread;
 
-class EventLoopThreadPool:noncopyable
+class EventLoopThreadPool : noncopyable
 {
 public:
-    using ThreadInitCallback = std::function<void(EventLoop*)>;
-    EventLoopThreadPool(EventLoop* baseLoop,const std::string& nameArg);
+    using ThreadInitCallback = std::function<void(EventLoop*)>; 
+
+    EventLoopThreadPool(EventLoop *baseLoop, const std::string &nameArg);
     ~EventLoopThreadPool();
 
-    void setThreadPoolNumber(int numThreads) {m_numThread = numThreads;}
-    
-    void start(const ThreadInitCallback& cb);
+    void setThreadNum(int numThreads) { numThreads_ = numThreads; }
 
-    EventLoop* getNextLoop();//round robin
+    void start(const ThreadInitCallback &cb = ThreadInitCallback());
 
-    bool started() {return is_started;}
-    const std::string name() const {return m_name;}
+    // 如果工作在多线程中，baseLoop_默认以轮询的方式分配channel给subloop
+    EventLoop* getNextLoop();
 
+    std::vector<EventLoop*> getAllLoops();
+
+    bool started() const { return started_; }
+    const std::string name() const { return name_; }
 private:
-    EventLoop*                                      m_baseLoop;
-    std::string                                     m_name;
-    bool                                            is_started;
-    int                                             m_numThread;
-    int                                             m_next;
-    std::vector<std::unique_ptr<EventLoopThread>>   m_threads;
-    std::vector<EventLoop*>                         m_loops;
+
+    EventLoop *baseLoop_; // EventLoop loop;  
+    std::string name_;
+    bool started_;
+    int numThreads_;
+    int next_;
+    std::vector<std::unique_ptr<EventLoopThread>> threads_;
+    std::vector<EventLoop*> loops_;
 };

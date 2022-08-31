@@ -2,34 +2,34 @@
 
 #include <time.h>
 
-Timestamp Timestamp:: now()
+Timestamp::Timestamp():microSecondsSinceEpoch_(0) {}
+
+Timestamp::Timestamp(int64_t microSecondsSinceEpoch)
+    : microSecondsSinceEpoch_(microSecondsSinceEpoch)
+    {}
+
+Timestamp Timestamp::now()
 {
-    return Timestamp(time(nullptr));
+    return Timestamp(time(NULL));
 }
 
-Timestamp::Timestamp():m_microSecondSinceEpoch(0){}
-
-Timestamp::Timestamp(int64_t microSecondSinceEpoch):m_microSecondSinceEpoch(microSecondSinceEpoch){}
-
-std::string Timestamp::tostring() const
+std::string Timestamp::toString() const
 {
     char buf[128] = {0};
-    tm* nowtime = localtime(&m_microSecondSinceEpoch);
-    snprintf(buf,128,"%4d/%02d/%02d %02d:%02d:%02d",
-        nowtime->tm_year+1900,
-        nowtime->tm_mon+1,          //accordig to localtime-> struct tm
-        nowtime->tm_mday,
-        nowtime->tm_hour,
-        nowtime->tm_min,
-        nowtime->tm_sec);
+    tm *tm_time = localtime(&microSecondsSinceEpoch_);
+    snprintf(buf, 128, "%4d/%02d/%02d %02d:%02d:%02d", 
+        tm_time->tm_year + 1900,
+        tm_time->tm_mon + 1,
+        tm_time->tm_mday,
+        tm_time->tm_hour,
+        tm_time->tm_min,
+        tm_time->tm_sec);
     return buf;
 }
 
-// Testing code
 // #include <iostream>
 // int main()
 // {
-//     std::cout<<Timestamp::now().tostring();
-
+//     std::cout << Timestamp::now().toString() << std::endl; 
 //     return 0;
 // }

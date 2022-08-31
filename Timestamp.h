@@ -3,13 +3,14 @@
 #include <iostream>
 #include <string>
 
+// 时间类
 class Timestamp
 {
 public:
     Timestamp();
-    explicit Timestamp(int64_t microSecondSinceEpoch);//implicit conversion is not allowed
+    explicit Timestamp(int64_t microSecondsSinceEpoch);
     static Timestamp now();
-    std::string tostring() const;
+    std::string toString() const;
 private:
-    int64_t m_microSecondSinceEpoch;
+    int64_t microSecondsSinceEpoch_;
 };

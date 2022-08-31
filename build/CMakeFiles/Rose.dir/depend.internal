@@ -5,8 +5,6 @@ CMakeFiles/Rose.dir/Acceptor.o
  /data/home/jasonyichen/Rose/Acceptor.cc
  /data/home/jasonyichen/Rose/Acceptor.h
  /data/home/jasonyichen/Rose/Channel.h
- /data/home/jasonyichen/Rose/CurrentThread.h
- /data/home/jasonyichen/Rose/EventLoop.h
  /data/home/jasonyichen/Rose/InetAddress.h
  /data/home/jasonyichen/Rose/Logger.h
  /data/home/jasonyichen/Rose/Socket.h
@@ -27,7 +25,6 @@ CMakeFiles/Rose.dir/CurrentThread.o
  /data/home/jasonyichen/Rose/CurrentThread.cc
  /data/home/jasonyichen/Rose/CurrentThread.h
 CMakeFiles/Rose.dir/DefaultPoller.o
- /data/home/jasonyichen/Rose/Channel.h
  /data/home/jasonyichen/Rose/DefaultPoller.cc
  /data/home/jasonyichen/Rose/EPollPoller.h
  /data/home/jasonyichen/Rose/Poller.h
@@ -59,13 +56,10 @@ CMakeFiles/Rose.dir/EventLoopThread.o
  /data/home/jasonyichen/Rose/Timestamp.h
  /data/home/jasonyichen/Rose/noncopyable.h
 CMakeFiles/Rose.dir/EventLoopThreadPool.o
- /data/home/jasonyichen/Rose/CurrentThread.h
- /data/home/jasonyichen/Rose/EventLoop.h
  /data/home/jasonyichen/Rose/EventLoopThread.h
  /data/home/jasonyichen/Rose/EventLoopThreadPool.cc
  /data/home/jasonyichen/Rose/EventLoopThreadPool.h
  /data/home/jasonyichen/Rose/Thread.h
- /data/home/jasonyichen/Rose/Timestamp.h
  /data/home/jasonyichen/Rose/noncopyable.h
 CMakeFiles/Rose.dir/InetAddress.o
  /data/home/jasonyichen/Rose/InetAddress.cc
@@ -109,7 +103,6 @@ CMakeFiles/Rose.dir/TcpServer.o
  /data/home/jasonyichen/Rose/Channel.h
  /data/home/jasonyichen/Rose/CurrentThread.h
  /data/home/jasonyichen/Rose/EventLoop.h
- /data/home/jasonyichen/Rose/EventLoopThread.h
  /data/home/jasonyichen/Rose/EventLoopThreadPool.h
  /data/home/jasonyichen/Rose/InetAddress.h
  /data/home/jasonyichen/Rose/Logger.h
@@ -117,7 +110,6 @@ CMakeFiles/Rose.dir/TcpServer.o
  /data/home/jasonyichen/Rose/TcpConnection.h
  /data/home/jasonyichen/Rose/TcpServer.cc
  /data/home/jasonyichen/Rose/TcpServer.h
- /data/home/jasonyichen/Rose/Thread.h
  /data/home/jasonyichen/Rose/Timestamp.h
  /data/home/jasonyichen/Rose/noncopyable.h
 CMakeFiles/Rose.dir/Thread.o

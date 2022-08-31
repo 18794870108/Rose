@@ -4,6 +4,7 @@
 #include <netinet/in.h>
 #include <string>
 
+// 封装socket地址类型
 class InetAddress
 {
 public:
@@ -18,7 +19,6 @@ public:
 
     const sockaddr_in* getSockAddr() const {return &addr_;}
     void setSockAddr(const sockaddr_in &addr) { addr_ = addr; }
-    
 private:
     sockaddr_in addr_;
 };

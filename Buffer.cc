@@ -4,68 +4,48 @@
 #include <sys/uio.h>
 #include <unistd.h>
 
-void Buffer::makespace(size_t len)
+/**
+ * 从fd上读取数据  Poller工作在LT模式
+ * Buffer缓冲区是有大小的！ 但是从fd上读数据的时候，却不知道tcp数据最终的大小
+ */ 
+ssize_t Buffer::readFd(int fd, int* saveErrno)
 {
-    if(writeableBytes()+perPendBytes()<len+perPend)
-    {
-        m_buffer.resize(m_writeIndex+len);
-    }
-    else
-    {
-        size_t readable = readableBytes();
-        std::copy(begin()+m_readIndex,
-                  begin()+m_writeIndex,
-                  begin()+perPend);
-        m_readIndex = perPend;
-        m_writeIndex = m_readIndex+readable;
-    }
-}
-
-void Buffer::append(const char* data,size_t len) 
-{
-    ensureWriteableBytes(len);
-    std::copy(data,data+len,writeBegin());
-    m_writeIndex+=len;
-}
-
-ssize_t Buffer::readFd(int fd,int* saveError)
-{
-    char extrabuf[65536] = {0};
+    char extrabuf[65536] = {0}; // 栈上的内存空间  64K
     
     struct iovec vec[2];
-    const size_t writeable = writeableBytes();
     
-    vec[0].iov_base = begin()+m_writeIndex;
-    vec[0].iov_len = writeable;
+    const size_t writable = writableBytes(); // 这是Buffer底层缓冲区剩余的可写空间大小
+    vec[0].iov_base = begin() + writerIndex_;
+    vec[0].iov_len = writable;
+
     vec[1].iov_base = extrabuf;
-    vec[1].iov_len = sizeof(extrabuf);
-
-    const int iovcont = (writeable<sizeof(extrabuf))?2:1;
-    const int n = readv(fd,vec,iovcont);
-
-    if(n<0)
+    vec[1].iov_len = sizeof extrabuf;
+    
+    const int iovcnt = (writable < sizeof extrabuf) ? 2 : 1;
+    const ssize_t n = ::readv(fd, vec, iovcnt);
+    if (n < 0)
     {
-        *saveError = errno;
+        *saveErrno = errno;
     }
-    else if(n<=writeable)
+    else if (n <= writable) // Buffer的可写缓冲区已经够存储读出来的数据了
     {
-        m_writeIndex+=n;
+        writerIndex_ += n;
     }
-    else
+    else // extrabuf里面也写入了数据 
     {
-        m_writeIndex = m_buffer.size();
-        append(extrabuf,n-writeable);   
+        writerIndex_ = buffer_.size();
+        append(extrabuf, n - writable);  // writerIndex_开始写 n - writable大小的数据
     }
 
     return n;
 }
 
-ssize_t Buffer::writeFd(int fd,int* saveError)
+ssize_t Buffer::writeFd(int fd, int* saveErrno)
 {
-    ssize_t n = ::write(fd,readableBegin(),readableBytes());
-    if(n<0)
+    ssize_t n = ::write(fd, peek(), readableBytes());
+    if (n < 0)
     {
-        *saveError = errno;
+        *saveErrno = errno;
     }
     return n;
 }

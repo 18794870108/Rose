@@ -3,54 +3,58 @@
 
 #include <semaphore.h>
 
-std::atomic_int Thread::m_threadCnt{0};
+std::atomic_int Thread::numCreated_(0);
 
-Thread::Thread(ThreadFunc,const std::string& name)
-    :m_started(false)
-    ,m_joined(false)
-    ,m_tid(0)
-    ,m_func(std::move(ThreadFunc()))
-    ,m_name(name)
+Thread::Thread(ThreadFunc func, const std::string &name)
+    : started_(false)
+    , joined_(false)
+    , tid_(0)
+    , func_(std::move(func))
+    , name_(name)
 {
     setDefaultName();
 }
 
 Thread::~Thread()
 {
-    if(m_started&&!m_joined)
+    if (started_ && !joined_)
     {
-        m_thread->detach();
+        thread_->detach(); // thread类提供的设置分离线程的方法
     }
 }
 
-void Thread::start()//when this function down , a new thread must be created 
+void Thread::start()  // 一个Thread对象，记录的就是一个新线程的详细信息
 {
-    m_started = true;
+    started_ = true;
     sem_t sem;
-    sem_init(&sem,false,0);
-    
-    m_thread = std::shared_ptr<std::thread>(new std::thread([&]{
-        m_tid = CurrentThread::tid();
+    sem_init(&sem, false, 0);
+
+    // 开启线程
+    thread_ = std::shared_ptr<std::thread>(new std::thread([&](){
+        // 获取线程的tid值
+        tid_ = CurrentThread::tid();
         sem_post(&sem);
-        m_func();
-        }));
-    
+        // 开启一个新线程，专门执行该线程函数
+        func_(); 
+    }));
+
+    // 这里必须等待获取上面新创建的线程的tid值
     sem_wait(&sem);
 }
 
 void Thread::join()
 {
-    m_joined = true;
-    m_thread->join();
+    joined_ = true;
+    thread_->join();
 }
 
 void Thread::setDefaultName()
 {
-    int num = ++m_threadCnt;
-    if(m_name.empty())
+    int num = ++numCreated_;
+    if (name_.empty())
     {
         char buf[32] = {0};
-        snprintf(buf,sizeof(buf),"Thread:%d",num);
-        m_name = buf;
+        snprintf(buf, sizeof buf, "Thread%d", num);
+        name_ = buf;
     }
 }

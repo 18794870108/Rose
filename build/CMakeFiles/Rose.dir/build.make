@@ -56,15 +56,15 @@ CMakeFiles/Rose.dir/EPollPoller.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/EPollPoller.o: ../EPollPoller.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/EPollPoller.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/EPollPoller.o -c /data/home/jasonyichen/Rose/EPollPoller.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/EPollPoller.o -c /data/home/jasonyichen/Rose/EPollPoller.cc
 
 CMakeFiles/Rose.dir/EPollPoller.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/EPollPoller.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/EPollPoller.cc > CMakeFiles/Rose.dir/EPollPoller.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/EPollPoller.cc > CMakeFiles/Rose.dir/EPollPoller.i
 
 CMakeFiles/Rose.dir/EPollPoller.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/EPollPoller.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/EPollPoller.cc -o CMakeFiles/Rose.dir/EPollPoller.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/EPollPoller.cc -o CMakeFiles/Rose.dir/EPollPoller.s
 
 CMakeFiles/Rose.dir/EPollPoller.o.requires:
 .PHONY : CMakeFiles/Rose.dir/EPollPoller.o.requires
@@ -79,15 +79,15 @@ CMakeFiles/Rose.dir/CurrentThread.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/CurrentThread.o: ../CurrentThread.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/CurrentThread.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/CurrentThread.o -c /data/home/jasonyichen/Rose/CurrentThread.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/CurrentThread.o -c /data/home/jasonyichen/Rose/CurrentThread.cc
 
 CMakeFiles/Rose.dir/CurrentThread.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/CurrentThread.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/CurrentThread.cc > CMakeFiles/Rose.dir/CurrentThread.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/CurrentThread.cc > CMakeFiles/Rose.dir/CurrentThread.i
 
 CMakeFiles/Rose.dir/CurrentThread.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/CurrentThread.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/CurrentThread.cc -o CMakeFiles/Rose.dir/CurrentThread.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/CurrentThread.cc -o CMakeFiles/Rose.dir/CurrentThread.s
 
 CMakeFiles/Rose.dir/CurrentThread.o.requires:
 .PHONY : CMakeFiles/Rose.dir/CurrentThread.o.requires
@@ -102,15 +102,15 @@ CMakeFiles/Rose.dir/Logger.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/Logger.o: ../Logger.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/Logger.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Logger.o -c /data/home/jasonyichen/Rose/Logger.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Logger.o -c /data/home/jasonyichen/Rose/Logger.cc
 
 CMakeFiles/Rose.dir/Logger.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/Logger.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Logger.cc > CMakeFiles/Rose.dir/Logger.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Logger.cc > CMakeFiles/Rose.dir/Logger.i
 
 CMakeFiles/Rose.dir/Logger.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/Logger.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Logger.cc -o CMakeFiles/Rose.dir/Logger.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Logger.cc -o CMakeFiles/Rose.dir/Logger.s
 
 CMakeFiles/Rose.dir/Logger.o.requires:
 .PHONY : CMakeFiles/Rose.dir/Logger.o.requires
@@ -125,15 +125,15 @@ CMakeFiles/Rose.dir/TcpConnection.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/TcpConnection.o: ../TcpConnection.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/TcpConnection.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/TcpConnection.o -c /data/home/jasonyichen/Rose/TcpConnection.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/TcpConnection.o -c /data/home/jasonyichen/Rose/TcpConnection.cc
 
 CMakeFiles/Rose.dir/TcpConnection.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/TcpConnection.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/TcpConnection.cc > CMakeFiles/Rose.dir/TcpConnection.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/TcpConnection.cc > CMakeFiles/Rose.dir/TcpConnection.i
 
 CMakeFiles/Rose.dir/TcpConnection.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/TcpConnection.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/TcpConnection.cc -o CMakeFiles/Rose.dir/TcpConnection.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/TcpConnection.cc -o CMakeFiles/Rose.dir/TcpConnection.s
 
 CMakeFiles/Rose.dir/TcpConnection.o.requires:
 .PHONY : CMakeFiles/Rose.dir/TcpConnection.o.requires
@@ -148,15 +148,15 @@ CMakeFiles/Rose.dir/Buffer.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/Buffer.o: ../Buffer.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/Buffer.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Buffer.o -c /data/home/jasonyichen/Rose/Buffer.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Buffer.o -c /data/home/jasonyichen/Rose/Buffer.cc
 
 CMakeFiles/Rose.dir/Buffer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/Buffer.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Buffer.cc > CMakeFiles/Rose.dir/Buffer.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Buffer.cc > CMakeFiles/Rose.dir/Buffer.i
 
 CMakeFiles/Rose.dir/Buffer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/Buffer.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Buffer.cc -o CMakeFiles/Rose.dir/Buffer.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Buffer.cc -o CMakeFiles/Rose.dir/Buffer.s
 
 CMakeFiles/Rose.dir/Buffer.o.requires:
 .PHONY : CMakeFiles/Rose.dir/Buffer.o.requires
@@ -171,15 +171,15 @@ CMakeFiles/Rose.dir/Thread.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/Thread.o: ../Thread.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/Thread.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Thread.o -c /data/home/jasonyichen/Rose/Thread.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Thread.o -c /data/home/jasonyichen/Rose/Thread.cc
 
 CMakeFiles/Rose.dir/Thread.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/Thread.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Thread.cc > CMakeFiles/Rose.dir/Thread.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Thread.cc > CMakeFiles/Rose.dir/Thread.i
 
 CMakeFiles/Rose.dir/Thread.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/Thread.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Thread.cc -o CMakeFiles/Rose.dir/Thread.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Thread.cc -o CMakeFiles/Rose.dir/Thread.s
 
 CMakeFiles/Rose.dir/Thread.o.requires:
 .PHONY : CMakeFiles/Rose.dir/Thread.o.requires
@@ -194,15 +194,15 @@ CMakeFiles/Rose.dir/Poller.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/Poller.o: ../Poller.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/Poller.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Poller.o -c /data/home/jasonyichen/Rose/Poller.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Poller.o -c /data/home/jasonyichen/Rose/Poller.cc
 
 CMakeFiles/Rose.dir/Poller.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/Poller.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Poller.cc > CMakeFiles/Rose.dir/Poller.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Poller.cc > CMakeFiles/Rose.dir/Poller.i
 
 CMakeFiles/Rose.dir/Poller.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/Poller.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Poller.cc -o CMakeFiles/Rose.dir/Poller.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Poller.cc -o CMakeFiles/Rose.dir/Poller.s
 
 CMakeFiles/Rose.dir/Poller.o.requires:
 .PHONY : CMakeFiles/Rose.dir/Poller.o.requires
@@ -217,15 +217,15 @@ CMakeFiles/Rose.dir/Timestamp.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/Timestamp.o: ../Timestamp.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/Timestamp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Timestamp.o -c /data/home/jasonyichen/Rose/Timestamp.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Timestamp.o -c /data/home/jasonyichen/Rose/Timestamp.cc
 
 CMakeFiles/Rose.dir/Timestamp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/Timestamp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Timestamp.cc > CMakeFiles/Rose.dir/Timestamp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Timestamp.cc > CMakeFiles/Rose.dir/Timestamp.i
 
 CMakeFiles/Rose.dir/Timestamp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/Timestamp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Timestamp.cc -o CMakeFiles/Rose.dir/Timestamp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Timestamp.cc -o CMakeFiles/Rose.dir/Timestamp.s
 
 CMakeFiles/Rose.dir/Timestamp.o.requires:
 .PHONY : CMakeFiles/Rose.dir/Timestamp.o.requires
@@ -240,15 +240,15 @@ CMakeFiles/Rose.dir/Socket.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/Socket.o: ../Socket.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/Socket.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Socket.o -c /data/home/jasonyichen/Rose/Socket.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Socket.o -c /data/home/jasonyichen/Rose/Socket.cc
 
 CMakeFiles/Rose.dir/Socket.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/Socket.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Socket.cc > CMakeFiles/Rose.dir/Socket.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Socket.cc > CMakeFiles/Rose.dir/Socket.i
 
 CMakeFiles/Rose.dir/Socket.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/Socket.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Socket.cc -o CMakeFiles/Rose.dir/Socket.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Socket.cc -o CMakeFiles/Rose.dir/Socket.s
 
 CMakeFiles/Rose.dir/Socket.o.requires:
 .PHONY : CMakeFiles/Rose.dir/Socket.o.requires
@@ -263,15 +263,15 @@ CMakeFiles/Rose.dir/Channel.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/Channel.o: ../Channel.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/Channel.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Channel.o -c /data/home/jasonyichen/Rose/Channel.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Channel.o -c /data/home/jasonyichen/Rose/Channel.cc
 
 CMakeFiles/Rose.dir/Channel.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/Channel.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Channel.cc > CMakeFiles/Rose.dir/Channel.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Channel.cc > CMakeFiles/Rose.dir/Channel.i
 
 CMakeFiles/Rose.dir/Channel.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/Channel.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Channel.cc -o CMakeFiles/Rose.dir/Channel.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Channel.cc -o CMakeFiles/Rose.dir/Channel.s
 
 CMakeFiles/Rose.dir/Channel.o.requires:
 .PHONY : CMakeFiles/Rose.dir/Channel.o.requires
@@ -286,15 +286,15 @@ CMakeFiles/Rose.dir/EventLoopThread.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/EventLoopThread.o: ../EventLoopThread.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/EventLoopThread.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/EventLoopThread.o -c /data/home/jasonyichen/Rose/EventLoopThread.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/EventLoopThread.o -c /data/home/jasonyichen/Rose/EventLoopThread.cc
 
 CMakeFiles/Rose.dir/EventLoopThread.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/EventLoopThread.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/EventLoopThread.cc > CMakeFiles/Rose.dir/EventLoopThread.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/EventLoopThread.cc > CMakeFiles/Rose.dir/EventLoopThread.i
 
 CMakeFiles/Rose.dir/EventLoopThread.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/EventLoopThread.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/EventLoopThread.cc -o CMakeFiles/Rose.dir/EventLoopThread.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/EventLoopThread.cc -o CMakeFiles/Rose.dir/EventLoopThread.s
 
 CMakeFiles/Rose.dir/EventLoopThread.o.requires:
 .PHONY : CMakeFiles/Rose.dir/EventLoopThread.o.requires
@@ -309,15 +309,15 @@ CMakeFiles/Rose.dir/DefaultPoller.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/DefaultPoller.o: ../DefaultPoller.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/DefaultPoller.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/DefaultPoller.o -c /data/home/jasonyichen/Rose/DefaultPoller.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/DefaultPoller.o -c /data/home/jasonyichen/Rose/DefaultPoller.cc
 
 CMakeFiles/Rose.dir/DefaultPoller.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/DefaultPoller.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/DefaultPoller.cc > CMakeFiles/Rose.dir/DefaultPoller.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/DefaultPoller.cc > CMakeFiles/Rose.dir/DefaultPoller.i
 
 CMakeFiles/Rose.dir/DefaultPoller.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/DefaultPoller.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/DefaultPoller.cc -o CMakeFiles/Rose.dir/DefaultPoller.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/DefaultPoller.cc -o CMakeFiles/Rose.dir/DefaultPoller.s
 
 CMakeFiles/Rose.dir/DefaultPoller.o.requires:
 .PHONY : CMakeFiles/Rose.dir/DefaultPoller.o.requires
@@ -332,15 +332,15 @@ CMakeFiles/Rose.dir/EventLoopThreadPool.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/EventLoopThreadPool.o: ../EventLoopThreadPool.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/EventLoopThreadPool.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/EventLoopThreadPool.o -c /data/home/jasonyichen/Rose/EventLoopThreadPool.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/EventLoopThreadPool.o -c /data/home/jasonyichen/Rose/EventLoopThreadPool.cc
 
 CMakeFiles/Rose.dir/EventLoopThreadPool.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/EventLoopThreadPool.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/EventLoopThreadPool.cc > CMakeFiles/Rose.dir/EventLoopThreadPool.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/EventLoopThreadPool.cc > CMakeFiles/Rose.dir/EventLoopThreadPool.i
 
 CMakeFiles/Rose.dir/EventLoopThreadPool.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/EventLoopThreadPool.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/EventLoopThreadPool.cc -o CMakeFiles/Rose.dir/EventLoopThreadPool.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/EventLoopThreadPool.cc -o CMakeFiles/Rose.dir/EventLoopThreadPool.s
 
 CMakeFiles/Rose.dir/EventLoopThreadPool.o.requires:
 .PHONY : CMakeFiles/Rose.dir/EventLoopThreadPool.o.requires
@@ -355,15 +355,15 @@ CMakeFiles/Rose.dir/TcpServer.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/TcpServer.o: ../TcpServer.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/TcpServer.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/TcpServer.o -c /data/home/jasonyichen/Rose/TcpServer.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/TcpServer.o -c /data/home/jasonyichen/Rose/TcpServer.cc
 
 CMakeFiles/Rose.dir/TcpServer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/TcpServer.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/TcpServer.cc > CMakeFiles/Rose.dir/TcpServer.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/TcpServer.cc > CMakeFiles/Rose.dir/TcpServer.i
 
 CMakeFiles/Rose.dir/TcpServer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/TcpServer.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/TcpServer.cc -o CMakeFiles/Rose.dir/TcpServer.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/TcpServer.cc -o CMakeFiles/Rose.dir/TcpServer.s
 
 CMakeFiles/Rose.dir/TcpServer.o.requires:
 .PHONY : CMakeFiles/Rose.dir/TcpServer.o.requires
@@ -378,15 +378,15 @@ CMakeFiles/Rose.dir/PollPoller.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/PollPoller.o: ../PollPoller.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/PollPoller.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/PollPoller.o -c /data/home/jasonyichen/Rose/PollPoller.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/PollPoller.o -c /data/home/jasonyichen/Rose/PollPoller.cc
 
 CMakeFiles/Rose.dir/PollPoller.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/PollPoller.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/PollPoller.cc > CMakeFiles/Rose.dir/PollPoller.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/PollPoller.cc > CMakeFiles/Rose.dir/PollPoller.i
 
 CMakeFiles/Rose.dir/PollPoller.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/PollPoller.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/PollPoller.cc -o CMakeFiles/Rose.dir/PollPoller.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/PollPoller.cc -o CMakeFiles/Rose.dir/PollPoller.s
 
 CMakeFiles/Rose.dir/PollPoller.o.requires:
 .PHONY : CMakeFiles/Rose.dir/PollPoller.o.requires
@@ -401,15 +401,15 @@ CMakeFiles/Rose.dir/InetAddress.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/InetAddress.o: ../InetAddress.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/InetAddress.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/InetAddress.o -c /data/home/jasonyichen/Rose/InetAddress.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/InetAddress.o -c /data/home/jasonyichen/Rose/InetAddress.cc
 
 CMakeFiles/Rose.dir/InetAddress.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/InetAddress.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/InetAddress.cc > CMakeFiles/Rose.dir/InetAddress.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/InetAddress.cc > CMakeFiles/Rose.dir/InetAddress.i
 
 CMakeFiles/Rose.dir/InetAddress.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/InetAddress.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/InetAddress.cc -o CMakeFiles/Rose.dir/InetAddress.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/InetAddress.cc -o CMakeFiles/Rose.dir/InetAddress.s
 
 CMakeFiles/Rose.dir/InetAddress.o.requires:
 .PHONY : CMakeFiles/Rose.dir/InetAddress.o.requires
@@ -424,15 +424,15 @@ CMakeFiles/Rose.dir/EventLoop.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/EventLoop.o: ../EventLoop.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/EventLoop.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/EventLoop.o -c /data/home/jasonyichen/Rose/EventLoop.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/EventLoop.o -c /data/home/jasonyichen/Rose/EventLoop.cc
 
 CMakeFiles/Rose.dir/EventLoop.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/EventLoop.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/EventLoop.cc > CMakeFiles/Rose.dir/EventLoop.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/EventLoop.cc > CMakeFiles/Rose.dir/EventLoop.i
 
 CMakeFiles/Rose.dir/EventLoop.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/EventLoop.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/EventLoop.cc -o CMakeFiles/Rose.dir/EventLoop.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/EventLoop.cc -o CMakeFiles/Rose.dir/EventLoop.s
 
 CMakeFiles/Rose.dir/EventLoop.o.requires:
 .PHONY : CMakeFiles/Rose.dir/EventLoop.o.requires
@@ -447,15 +447,15 @@ CMakeFiles/Rose.dir/Acceptor.o: CMakeFiles/Rose.dir/flags.make
 CMakeFiles/Rose.dir/Acceptor.o: ../Acceptor.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /data/home/jasonyichen/Rose/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Rose.dir/Acceptor.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Acceptor.o -c /data/home/jasonyichen/Rose/Acceptor.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Rose.dir/Acceptor.o -c /data/home/jasonyichen/Rose/Acceptor.cc
 
 CMakeFiles/Rose.dir/Acceptor.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rose.dir/Acceptor.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Acceptor.cc > CMakeFiles/Rose.dir/Acceptor.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /data/home/jasonyichen/Rose/Acceptor.cc > CMakeFiles/Rose.dir/Acceptor.i
 
 CMakeFiles/Rose.dir/Acceptor.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rose.dir/Acceptor.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Acceptor.cc -o CMakeFiles/Rose.dir/Acceptor.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /data/home/jasonyichen/Rose/Acceptor.cc -o CMakeFiles/Rose.dir/Acceptor.s
 
 CMakeFiles/Rose.dir/Acceptor.o.requires:
 .PHONY : CMakeFiles/Rose.dir/Acceptor.o.requires

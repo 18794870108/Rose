@@ -4,8 +4,6 @@
 CMakeFiles/Rose.dir/Acceptor.o: ../Acceptor.cc
 CMakeFiles/Rose.dir/Acceptor.o: ../Acceptor.h
 CMakeFiles/Rose.dir/Acceptor.o: ../Channel.h
-CMakeFiles/Rose.dir/Acceptor.o: ../CurrentThread.h
-CMakeFiles/Rose.dir/Acceptor.o: ../EventLoop.h
 CMakeFiles/Rose.dir/Acceptor.o: ../InetAddress.h
 CMakeFiles/Rose.dir/Acceptor.o: ../Logger.h
 CMakeFiles/Rose.dir/Acceptor.o: ../Socket.h
@@ -26,7 +24,6 @@ CMakeFiles/Rose.dir/Channel.o: ../noncopyable.h
 CMakeFiles/Rose.dir/CurrentThread.o: ../CurrentThread.cc
 CMakeFiles/Rose.dir/CurrentThread.o: ../CurrentThread.h
 
-CMakeFiles/Rose.dir/DefaultPoller.o: ../Channel.h
 CMakeFiles/Rose.dir/DefaultPoller.o: ../DefaultPoller.cc
 CMakeFiles/Rose.dir/DefaultPoller.o: ../EPollPoller.h
 CMakeFiles/Rose.dir/DefaultPoller.o: ../Poller.h
@@ -58,13 +55,10 @@ CMakeFiles/Rose.dir/EventLoopThread.o: ../Thread.h
 CMakeFiles/Rose.dir/EventLoopThread.o: ../Timestamp.h
 CMakeFiles/Rose.dir/EventLoopThread.o: ../noncopyable.h
 
-CMakeFiles/Rose.dir/EventLoopThreadPool.o: ../CurrentThread.h
-CMakeFiles/Rose.dir/EventLoopThreadPool.o: ../EventLoop.h
 CMakeFiles/Rose.dir/EventLoopThreadPool.o: ../EventLoopThread.h
 CMakeFiles/Rose.dir/EventLoopThreadPool.o: ../EventLoopThreadPool.cc
 CMakeFiles/Rose.dir/EventLoopThreadPool.o: ../EventLoopThreadPool.h
 CMakeFiles/Rose.dir/EventLoopThreadPool.o: ../Thread.h
-CMakeFiles/Rose.dir/EventLoopThreadPool.o: ../Timestamp.h
 CMakeFiles/Rose.dir/EventLoopThreadPool.o: ../noncopyable.h
 
 CMakeFiles/Rose.dir/InetAddress.o: ../InetAddress.cc
@@ -108,7 +102,6 @@ CMakeFiles/Rose.dir/TcpServer.o: ../Callbacks.h
 CMakeFiles/Rose.dir/TcpServer.o: ../Channel.h
 CMakeFiles/Rose.dir/TcpServer.o: ../CurrentThread.h
 CMakeFiles/Rose.dir/TcpServer.o: ../EventLoop.h
-CMakeFiles/Rose.dir/TcpServer.o: ../EventLoopThread.h
 CMakeFiles/Rose.dir/TcpServer.o: ../EventLoopThreadPool.h
 CMakeFiles/Rose.dir/TcpServer.o: ../InetAddress.h
 CMakeFiles/Rose.dir/TcpServer.o: ../Logger.h
@@ -116,7 +109,6 @@ CMakeFiles/Rose.dir/TcpServer.o: ../Socket.h
 CMakeFiles/Rose.dir/TcpServer.o: ../TcpConnection.h
 CMakeFiles/Rose.dir/TcpServer.o: ../TcpServer.cc
 CMakeFiles/Rose.dir/TcpServer.o: ../TcpServer.h
-CMakeFiles/Rose.dir/TcpServer.o: ../Thread.h
 CMakeFiles/Rose.dir/TcpServer.o: ../Timestamp.h
 CMakeFiles/Rose.dir/TcpServer.o: ../noncopyable.h
 

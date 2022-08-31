@@ -6,25 +6,34 @@
 #include <vector>
 #include <sys/epoll.h>
 
-class EPollPoller:public Poller
+class Channel;
+
+/**
+ * epoll的使用  
+ * epoll_create
+ * epoll_ctl   add/mod/del
+ * epoll_wait
+ */ 
+class EPollPoller : public Poller
 {
 public:
-    EPollPoller(EventLoop* loop);
-    ~EPollPoller();
+    EPollPoller(EventLoop *loop);
+    ~EPollPoller() override;
 
-    virtual Timestamp poll(int timeoutMS,ChannelList* activeChannels) override;
-    virtual void updateChannel(Channel* channel) override;
-    virtual void removeChannel(Channel* channel) override;
-
+    // 重写基类Poller的抽象方法
+    Timestamp poll(int timeoutMs, ChannelList *activeChannels) override;
+    void updateChannel(Channel *channel) override;
+    void removeChannel(Channel *channel) override;
 private:
+    static const int kInitEventListSize = 16;
+
+    // 填写活跃的连接
+    void fillActiveChannels(int numEvents, ChannelList *activeChannels) const;
+    // 更新channel通道
+    void update(int operation, Channel *channel);
+
     using EventList = std::vector<epoll_event>;
 
-    static const int InitEventListSize = 16;
-
-    void fillActiveChannels(int numEvents,ChannelList* activeChannels);
-
-    void update(int operation,Channel* channel);
-
-    int         m_epollfd;
-    EventList   m_events;
+    int epollfd_;
+    EventList events_;
 };

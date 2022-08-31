@@ -1,65 +1,51 @@
 #pragma once
 
 #include <vector>
-#include <sys/bitypes.h>
 #include <string>
+#include <algorithm>
 
+// 网络库底层的缓冲器类型定义
 class Buffer
 {
 public:
-    static const size_t     perPend = 8;
-    static const size_t     initialSize = 1024;
+    static const size_t kCheapPrepend = 8;
+    static const size_t kInitialSize = 1024;
 
-    explicit Buffer(size_t initialBufferSize = initialSize)
-        :m_buffer(perPend+initialSize),
-        m_readIndex(perPend),
-        m_writeIndex(perPend)
+    explicit Buffer(size_t initialSize = kInitialSize)
+        : buffer_(kCheapPrepend + initialSize)
+        , readerIndex_(kCheapPrepend)
+        , writerIndex_(kCheapPrepend)
     {}
 
-    char* begin() {return &(*m_buffer.begin());}
-
-    size_t perPendBytes() const
+    size_t readableBytes() const 
     {
-        return m_readIndex;
+        return writerIndex_ - readerIndex_;
     }
 
-    size_t readableBytes() const
+    size_t writableBytes() const
     {
-        return m_writeIndex-m_readIndex;
+        return buffer_.size() - writerIndex_;
     }
 
-    size_t writeableBytes() const
+    size_t prependableBytes() const
     {
-        return m_buffer.size()-m_writeIndex;
+        return readerIndex_;
     }
 
-    const char* begin() const 
+    // 返回缓冲区中可读数据的起始地址
+    const char* peek() const
     {
-        return &(*m_buffer.begin());
+        return begin() + readerIndex_;
     }
 
-    const char* readableBegin() const 
-    {
-        return begin()+m_readIndex;
-    }
-
-    char* writeBegin()
-    {
-        return begin()+m_writeIndex;
-    }
-
-    const char* writeBegin() const
-    {
-        return begin()+m_writeIndex;
-    }
-
+    // onMessage string <- Buffer
     void retrieve(size_t len)
     {
-        if(len<m_readIndex)//not finsh read all readable Bytes
+        if (len < readableBytes())
         {
-            m_readIndex+=len;
+            readerIndex_ += len; // 应用只读取了刻度缓冲区数据的一部分，就是len，还剩下readerIndex_ += len -> writerIndex_
         }
-        else
+        else   // len == readableBytes()
         {
             retrieveAll();
         }
@@ -67,39 +53,81 @@ public:
 
     void retrieveAll()
     {
-        m_readIndex = m_writeIndex = perPend;
+        readerIndex_ = writerIndex_ = kCheapPrepend;
     }
 
+    // 把onMessage函数上报的Buffer数据，转成string类型的数据返回
     std::string retrieveAllAsString()
     {
-        retrieveAsString(readableBytes());
+        return retrieveAsString(readableBytes()); // 应用可读取数据的长度
     }
 
     std::string retrieveAsString(size_t len)
     {
-        std::string res(readableBegin(),len);
-        retrieve(len);
-        return res;
+        std::string result(peek(), len);
+        retrieve(len); // 上面一句把缓冲区中可读的数据，已经读取出来，这里肯定要对缓冲区进行复位操作
+        return result;
     }
 
+    // buffer_.size() - writerIndex_    len
     void ensureWriteableBytes(size_t len)
     {
-        if(len>writeableBytes())
+        if (writableBytes() < len)
         {
-            makespace(len);
-        } 
+            makeSpace(len); // 扩容函数
+        }
     }
 
-    void append(const char* data,size_t len);
+    // 把[data, data+len]内存上的数据，添加到writable缓冲区当中
+    void append(const char *data, size_t len)
+    {
+        ensureWriteableBytes(len);
+        std::copy(data, data+len, beginWrite());
+        writerIndex_ += len;
+    }
 
-    ssize_t readFd(int fd,int* saveError);
-    ssize_t writeFd(int fd,int* saveError);
+    char* beginWrite()
+    {
+        return begin() + writerIndex_;
+    }
 
+    const char* beginWrite() const
+    {
+        return begin() + writerIndex_;
+    }
+
+    // 从fd上读取数据
+    ssize_t readFd(int fd, int* saveErrno);
+    // 通过fd发送数据
+    ssize_t writeFd(int fd, int* saveErrno);
 private:
+    char* begin()
+    {
+        // it.operator*()
+        return &*buffer_.begin();  // vector底层数组首元素的地址，也就是数组的起始地址
+    }
+    const char* begin() const
+    {
+        return &*buffer_.begin();
+    }
+    void makeSpace(size_t len)
+    {
+        if (writableBytes() + prependableBytes() < len + kCheapPrepend)
+        {
+            buffer_.resize(writerIndex_ + len);
+        }
+        else
+        {
+            size_t readalbe = readableBytes();
+            std::copy(begin() + readerIndex_, 
+                    begin() + writerIndex_,
+                    begin() + kCheapPrepend);
+            readerIndex_ = kCheapPrepend;
+            writerIndex_ = readerIndex_ + readalbe;
+        }
+    }
 
-    void makespace(size_t len);
-    
-    std::vector<char>       m_buffer;
-    size_t                  m_readIndex;
-    size_t                  m_writeIndex;
+    std::vector<char> buffer_;
+    size_t readerIndex_;
+    size_t writerIndex_;
 };

@@ -1,17 +1,13 @@
 #include "Poller.h"
 #include "Channel.h"
 
-Poller::Poller(EventLoop* loop):m_ownLoop(loop)
+Poller::Poller(EventLoop *loop)
+    : ownerLoop_(loop)
 {
-
 }
 
-Poller::~Poller() = default;
-
-bool Poller::hasChannel(Channel* channel)const 
+bool Poller::hasChannel(Channel *channel) const
 {
-    auto it = m_channels.find(channel->fd());
-    if(it!=m_channels.end() && it->second==channel)
-        return true;
-    return false;
+    auto it = channels_.find(channel->fd());
+    return it != channels_.end() && it->second == channel;
 }

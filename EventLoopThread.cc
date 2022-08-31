@@ -1,60 +1,62 @@
 #include "EventLoopThread.h"
 #include "EventLoop.h"
 
-EventLoopThread::EventLoopThread(const ThreadInitCallback& cb,const std::string& name)
-    :m_loop(nullptr)
-    ,is_exiting(false)
-    ,m_thread(std::bind(&EventLoopThread::threadFunc,this),name)
-    ,m_mutex()
-    ,m_cond()
-    ,m_callback(cb)
+
+EventLoopThread::EventLoopThread(const ThreadInitCallback &cb, 
+        const std::string &name)
+        : loop_(nullptr)
+        , exiting_(false)
+        , thread_(std::bind(&EventLoopThread::threadFunc, this), name)
+        , mutex_()
+        , cond_()
+        , callback_(cb)
 {
 
 }
 
 EventLoopThread::~EventLoopThread()
 {
-    is_exiting = true;
-    if(!m_loop)
+    exiting_ = true;
+    if (loop_ != nullptr)
     {
-        m_loop->quit();
-        m_thread.join();
+        loop_->quit();
+        thread_.join();
     }
 }
 
 EventLoop* EventLoopThread::startLoop()
 {
-    m_thread.start();
+    thread_.start(); // 启动底层的新线程
 
-    EventLoop* loop = nullptr;
-
+    EventLoop *loop = nullptr;
     {
-        std::unique_lock<std::mutex> lock(m_mutex);
-        while(loop)
+        std::unique_lock<std::mutex> lock(mutex_);
+        while ( loop_ == nullptr )
         {
-            m_cond.wait(lock);
+            cond_.wait(lock);
         }
-        loop = m_loop;
+        loop = loop_;
     }
-
     return loop;
 }
 
+// 下面这个方法，实在单独的新线程里面运行的
 void EventLoopThread::threadFunc()
 {
-    EventLoop loop;//core of one loop per thread
-    if(m_callback)
+    EventLoop loop; // 创建一个独立的eventloop，和上面的线程是一一对应的，one loop per thread
+
+    if (callback_)
     {
-        m_callback(&loop);
+        callback_(&loop);
     }
 
     {
-        std::unique_lock<std::mutex> lock(m_mutex);
-        m_loop = &loop;
-        m_cond.notify_one();
+        std::unique_lock<std::mutex> lock(mutex_);
+        loop_ = &loop;
+        cond_.notify_one();
     }
 
-    loop.loop();
-    std::unique_lock<std::mutex> lock(m_mutex);
-    m_loop = nullptr;
+    loop.loop(); // EventLoop loop  => Poller.poll
+    std::unique_lock<std::mutex> lock(mutex_);
+    loop_ = nullptr;
 }

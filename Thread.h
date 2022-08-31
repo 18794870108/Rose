@@ -5,32 +5,34 @@
 #include <functional>
 #include <thread>
 #include <memory>
+#include <unistd.h>
+#include <string>
 #include <atomic>
 
-class Thread:noncopyable
+class Thread : noncopyable
 {
 public:
     using ThreadFunc = std::function<void()>;
 
-    explicit Thread(ThreadFunc,const std::string& name);
+    explicit Thread(ThreadFunc, const std::string &name = std::string());
     ~Thread();
 
     void start();
     void join();
 
-    bool started() const {return m_started;}
-    pid_t tid() const {return m_tid;}
-    const std::string& name() const {return m_name;}
-    static int threadCnt() {return m_threadCnt;}
+    bool started() const { return started_; }
+    pid_t tid() const { return tid_; }
+    const std::string& name() const { return name_; }
 
+    static int numCreated() { return numCreated_; }
+private:
     void setDefaultName();
 
-private:
-    bool                            m_started;
-    bool                            m_joined;
-    std::shared_ptr<std::thread>    m_thread;
-    pid_t                           m_tid;
-    ThreadFunc                      m_func;
-    std::string                     m_name;
-    static std::atomic_int          m_threadCnt;
+    bool started_;
+    bool joined_;
+    std::shared_ptr<std::thread> thread_;
+    pid_t tid_;
+    ThreadFunc func_;
+    std::string name_;
+    static std::atomic_int numCreated_;
 };
