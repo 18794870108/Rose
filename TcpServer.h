@@ -45,7 +45,7 @@ private:
 
     ConnectionCallback                      m_connectioncallback;
     MessageCallback                         m_messageCallback;
-    WriteCompleteCallback                   m_writeCallback;
+    WriteCompleteCallback                   m_writeCompleteCallback;
     ThreadInitCallback                      m_ThreadInitCallback;
 
     std::atomic<int>                        m_started;
