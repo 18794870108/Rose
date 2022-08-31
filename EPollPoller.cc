@@ -47,7 +47,7 @@ void EPollPoller::updateChannel(Channel* channel)
         if(channel->isNoneEvent())
         {
             update(EPOLL_CTL_DEL,channel);
-            channel->set_status(EventDelete);// why?
+            channel->set_status(EventDelete);
         }
         else
         {
@@ -70,7 +70,7 @@ void EPollPoller::removeChannel(Channel* channel)
     {
         update(EPOLL_CTL_DEL,channel);
     }
-    channel->set_status(EventNew);
+    channel->set_status(EventNew);// why?
 }
 
 Timestamp EPollPoller::poll(int timeoutMS,ChannelList* activeChannels)
